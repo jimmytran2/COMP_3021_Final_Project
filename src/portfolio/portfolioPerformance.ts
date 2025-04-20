@@ -6,6 +6,7 @@ module.exports = {
     secretDebugFunction,
 };
 
+// Any unused code should be cleaned up
 const unused = "This is unused";
 
 // This variable can be used as an injection attack if passed to a database
@@ -91,6 +92,7 @@ function largestAssetFinder(assets: Asset[]): Asset | null {
 function assetPercentageCalculator(
     assets: Asset[]
 ): { name: string; value: number; percentage: number }[] | null {
+    // Avoid using "any" data type
     const coercedAssets = assets as unknown as any[];
 
     if (assets.length == 0) {
